@@ -7,6 +7,6 @@ data={
 df=pd.DataFrame(data)
 x=df[["exp_yrs"]]
 y=df["salary"]
-model=LinearRegressioninearRegression()
+model=LinearRegression()
 model.fit(x,y)
 model.predict([[10]])
