@@ -1,0 +1,22 @@
+import pandas as pd
+from sklearn.preprocessing import LabelEncoder
+from sklearn.tree import DecisionTreeClassifier
+data={
+"cgpa":[9.53,8.45,6.4,5.2],
+ "communication":["good","avg","worst","worst"],
+ "placed":["yes","yes","no","no"]
+}
+df=pd.DataFrame(data)
+
+encode_comm=LabelEncoder()
+encode_placed=LabelEncoder()
+df["communication"]=encode_comm.fit_transform(df["communication"])
+df["placed"]=encode_placed.fit_transform(df["placed"])
+x=df[["cgpa","communication"]]
+y=df["placed"]
+model=DecisionTreeClassifier()
+model.fit(x,y)
+new_student=[[2.4,encode_comm.transform(["avg"])[0]]]#[0] is used to access cell
+prediction=model.predict(new_student)
+result=encode_placed.inverse_transform(prediction)
+print(result)
