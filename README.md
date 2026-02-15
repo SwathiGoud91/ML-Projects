@@ -9,7 +9,7 @@ The workshop helped me practice:
 
 ## About the Project
 This repository contains three machine learning projects developed during a workshop:
-1. **Salary Prediction (Regression):** One Predicts salary based on age and Another on years of experience.
+1. **Salary Prediction (Regression):**  Predicts salary based on years of experience.
 2. **Placement Prediction (Classification):** Predicts whether a student is placed or not based on communication skills and CGPA.
 
 ## Learning Context
