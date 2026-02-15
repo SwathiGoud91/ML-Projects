@@ -1,0 +1,12 @@
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+data={
+    exp_yrs:[1,2,3,4,5]
+    salary:[2,4,6,8,10]
+}
+df=pd.DataFrame(data)
+x=df[["exp_yrs"]]
+y=df["salary"]
+model=LinearRegressioninearRegression()
+model.fit(x,y)
+model.predict([[10]])
